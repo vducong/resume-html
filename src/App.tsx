@@ -148,7 +148,7 @@ function ProjectWorkExp({ project }: { project: ProjectProps }) {
           <span>{project.name}</span>
         )}
         {": "}
-        <span>{project.desc}</span>
+        {project.desc && <span>{project.desc}</span>}
       </div>
       <ul className="projectWorkExp">
         {project.works.map((work, idx) => (

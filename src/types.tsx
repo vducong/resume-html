@@ -17,7 +17,7 @@ export type JobWorkExp = ProjectProps | WorkProps;
 
 export type ProjectProps = {
   name: string;
-  desc: string;
+  desc?: string;
   url?: string;
   works: WorkProps[];
 };
