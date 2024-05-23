@@ -1,3 +1,23 @@
+export type MasterDataProps = {
+  contact: ContactProps;
+  intro: string;
+  exp: SectionProps[];
+};
+
+export type ContactProps = {
+  fullName: string;
+  phone?: string;
+  email: string;
+  linkedIn?: {
+    href: string;
+    text: string;
+  };
+  github?: {
+    href: string;
+    text: string;
+  };
+};
+
 export type SectionProps = {
   title: string;
   job: JobProps[];
