@@ -43,26 +43,25 @@ export const masterData: MasterDataProps = {
           works: [
             {
               name: "ARM",
-              desc: "account receivable management platform written in Go and Vue.js",
               url: "https://arm.bizzi.vn",
               works: [
+                {
+                  work: "Led a lean team through all phases of the invoicing lifecycle to successfully deliver an account receivables management platform using Go and Vue.js.",
+                },
                 {
                   work: "Integrated invoices from diverse sources (email, CSV, Bizzi Invoice) for seamless data creation and management.",
                 },
                 {
-                  work: "Enhanced email flows and notifications to boost collaboration between stakeholders for receivables collection.",
+                  work: "Implemented collaboration workflows and notifications boosting stakeholder coordination for receivables collection.",
                 },
                 {
-                  work: "Engineered real-time dashboard showcasing key receivable indicators (DSO, collections, aging) for reporting.",
+                  work: "Engineered real-time dashboard showcasing key metrics like DSO, aging, and collections to enable insightful reporting.",
                 },
                 {
                   work: "Integrated Bizzi Pay for automated invoice payment reconciliation.",
                 },
                 {
                   work: "Upgraded system architecture and implemented monitoring via Datadog/NewRelic for optimal performance.",
-                },
-                {
-                  work: "Collaborated closely with BD, CS, and Product teams on roadmap planning and aligning to client needs.",
                 },
               ],
             },
@@ -90,7 +89,7 @@ export const masterData: MasterDataProps = {
               name: "Trading system",
               works: [
                 {
-                  work: "Wrote functionality for advanced payment, dividend automation, and platform fee payment enforcement.",
+                  work: "Wrote functionality for advanced payment and platform fee payment enforcement, increasing revenue by up to 30%.",
                 },
                 {
                   work: "Optimized legacy order system architecture.",
@@ -155,7 +154,7 @@ export const masterData: MasterDataProps = {
                   work: "Integrated audience data import from CSV, UI, and Google BigQuery, handling 500K+ contacts.",
                 },
                 {
-                  work: "Enabled admin management of 800+ campaigns, including customization, scheduling, previewing, and testing emails.",
+                  work: "Enabled admin management of 400+ campaigns, including customization, scheduling, previewing, and testing emails.",
                 },
               ],
             },
