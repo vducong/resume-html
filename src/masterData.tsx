@@ -18,18 +18,6 @@ export const masterData: MasterDataProps = {
     "A full-stack software engineer with field experience in web development. Confident with numerical thinking and an analytic mindset to aim at effective problem-solving.\nI love traveling. Travel allows me to perceive the world in a more vivid way. One of my dreams is to take my wife on a global journey where we may see new cultures, hear fascinating tales, and shoot innumerable photographs to remember the experience.",
   exp: [
     {
-      title: "Education",
-      job: [
-        {
-          jobTitle: "Politechnika Warszawska",
-          startMonth: "Oct. 2016",
-          endMonth: "Oct. 2020",
-          companyDesc: "Bachelor of Engineering in Telecommunications",
-          works: [],
-        },
-      ],
-    },
-    {
       title: "Professional Experience",
       job: [
         {
@@ -174,6 +162,18 @@ export const masterData: MasterDataProps = {
               work: "Started as a full-stack engineer, working with React, Node.js, and Jitsi. Expanded to product management and cross-functional leadership throughout the entire product lifecycle.",
             },
           ],
+        },
+      ],
+    },
+    {
+      title: "Education",
+      job: [
+        {
+          jobTitle: "Politechnika Warszawska",
+          startMonth: "Oct. 2016",
+          endMonth: "Oct. 2020",
+          companyDesc: "Bachelor of Engineering in Telecommunications",
+          works: [],
         },
       ],
     },
