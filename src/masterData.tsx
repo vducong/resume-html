@@ -21,7 +21,7 @@ export const masterData: MasterDataProps = {
       title: "Education",
       job: [
         {
-          jobTitle: "Warsaw University of Technology",
+          jobTitle: "Politechnika Warszawska",
           startMonth: "Oct. 2016",
           endMonth: "Oct. 2020",
           companyDesc: "Bachelor of Engineering in Telecommunications",
@@ -39,14 +39,15 @@ export const masterData: MasterDataProps = {
           companyDesc:
             "SaaS platform that provides automated invoice management software for businesses",
           startMonth: "Jun. 2023",
-          endMonth: "present",
+          endMonth: "Jun. 2024",
           works: [
             {
               name: "ARM",
+              desc: "an account receivables management platform using Go and Vue.js",
               url: "https://arm.bizzi.vn",
               works: [
                 {
-                  work: "Led a lean team through all phases of the invoicing lifecycle to successfully deliver an account receivables management platform using Go and Vue.js.",
+                  work: "Led a lean team through all phases of the invoicing lifecycle to successfully bring the product to market.",
                 },
                 {
                   work: "Integrated invoices from diverse sources (email, CSV, Bizzi Invoice) for seamless data creation and management.",
@@ -72,7 +73,7 @@ export const masterData: MasterDataProps = {
               work: "Helped design Bizzi Pay's database schema, system architecture, and payment integration with PayME and MSB.",
             },
             {
-              work: "Utilized Serverless, AWS Lambda and SQS to create a system for extracting bank statements from various banks.",
+              work: "Utilized NestJS, Serverless, AWS Lambda and SQS to create a system for extracting bank statements from various banks.",
             },
           ],
         },
@@ -92,7 +93,7 @@ export const masterData: MasterDataProps = {
                   work: "Wrote functionality for advanced payment and platform fee payment enforcement, increasing revenue by up to 30%.",
                 },
                 {
-                  work: "Optimized legacy order system architecture.",
+                  work: "Refactored the pricing system to run asynchronously, implemented WebSocket for real-time updates, and used TimescaleDB and Redis for storing data, eliminating reliance on unstable crawled pricing.",
                 },
               ],
             },
@@ -100,7 +101,7 @@ export const masterData: MasterDataProps = {
               name: "Promotion system",
               works: [
                 {
-                  work: "Redesigned service architecture, and restructured its MySQL/Firestore database schemas.",
+                  work: "Decoupled services, redesigned MySQL/Firestore schemas to improve scalability in response to new business needs.",
                 },
                 {
                   work: "Constructed 20+ gamification campaigns driving 500K+ rewards and user engagement.",
@@ -108,7 +109,7 @@ export const masterData: MasterDataProps = {
               ],
             },
             {
-              work: "Delivered cutting-edge features to the web platform using Typescript, Next.js and MUI, encompassing trading, portfolio management, and ticker pricing charts.",
+              work: "Delivered cutting-edge features to the web platform using TypeScript, Next.js and MUI, encompassing trading, portfolio management, and ticker pricing charts.",
             },
             {
               work: "Added robust moderation capabilities - post reporting, user blocking, and automated moderation - to Anfin Community.",
@@ -137,7 +138,7 @@ export const masterData: MasterDataProps = {
           works: [
             {
               name: "STEAMese",
-              desc: "a social network enabling children to share and discuss their passion for STEM",
+              desc: "a social network with 10K+ users enabling children to share and discuss their passion for STEM",
               url: "https://steamforvietnam.org/steamese",
               works: [
                 {
@@ -151,7 +152,7 @@ export const masterData: MasterDataProps = {
               url: "https://steamify.steamforvietnam.org/",
               works: [
                 {
-                  work: "Integrated audience data import from CSV, UI, and Google BigQuery, handling 500K+ contacts.",
+                  work: "Integrated audience data import from CSV, UI, and BigQuery, handling 500K+ contacts.",
                 },
                 {
                   work: "Enabled admin management of 400+ campaigns, including customization, scheduling, previewing, and testing emails.",
