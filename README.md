@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Duc Cong Vu's resume template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Too tired from adjusting font formats and aligning spacing on Google Docs, I created this template for the peace of mind of resume editing.
 
-## Available Scripts
+Built with Create React App (CRA) and TypeScript, this project aims to provide an easy-to-use and customizable template to help you create a professional-looking resume quickly
 
-In the project directory, you can run:
+## Getting started
 
-### `npm start`
+### Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+git clone https://github.com/vducong/resume-html.git
+cd resume-html
+```
 
-### `npm test`
+2. Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+### Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open http://localhost:3000 to view it in the browser.
 
-### `npm run eject`
+### Customize your resume
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Edit the data
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Change the `src/masterData.ts` file to include your details, education, work experience, skills, and whatever else makes you look cool :D
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Edit the structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   Tweak the `src/App.tsx` file and components in the `src/components` directory if you want to mess with the structure.
 
-## Learn More
+3. Edit the styles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Go wild with the styles in the `src/styles` directory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Printing to the PDF
+
+To get a PDF version of your resume, use your browser's print functionality. While previewing the resume in the browser, press `Ctrl + P` (or `Cmd + P` on Mac) and choose "Save as PDF" as the destination.
+
+## License
+
+Format is MIT but all the data is owned by Duc Cong Vu.
