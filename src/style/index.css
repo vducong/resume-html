@@ -1,42 +1,22 @@
+:root {
+  --page-width: 220mm;
+  --page-height: 312mm;
+}
+
 body {
   font-family: "EB Garamond", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   margin: 0;
-  padding: 0;
+  padding: 10mm;
   line-height: 1.4;
-  width: 210mm;
-  height: 297mm;
+  width: var(--page-width);
+  height: var(--page-height);
 
   .App {
     margin: 0;
     width: 100%;
-    height: 100%;
-  }
-
-  @page {
-    size: A4;
-    margin: 0;
-  }
-
-  @media print {
-    html,
-    body {
-      width: 210mm;
-      height: 297mm;
-    }
-
-    .App {
-      margin: 0;
-      border: initial;
-      border-radius: initial;
-      width: initial;
-      min-height: initial;
-      box-shadow: initial;
-      background: initial;
-      page-break-after: always;
-    }
   }
 }
 
@@ -46,4 +26,23 @@ h1 {
 
 ul {
   padding-inline-start: 20px;
+}
+
+@media print {
+  @page {
+    size: var(--page-width) var(--page-height);
+    size: portrait;
+    margin: 0;
+  }
+
+  .App {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
 }
