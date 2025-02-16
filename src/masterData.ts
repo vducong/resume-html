@@ -22,6 +22,29 @@ export const masterData: MasterDataProps = {
       job: [
         {
           jobTitle: "Software Engineer",
+          companyName: "1Long",
+          companyUrl: "https://1long.vn",
+          companyDesc:
+            "Forward-thinking fintech startup revolutionizing asset management with a commitment to continuous innovation",
+          startMonth: "Jul. 2024",
+          endMonth: "present",
+          works: [
+            {
+              work: "Spearheaded a fully functional MVP within one month using a microservices architecture (Go, Node.js, React, GCP, PostgreSQL) that laid the tech foundation for scaling to 10K+ users and 30B+ VND AUM.",
+            },
+            {
+              work: "Instituted comprehensive GCP-based monitoring system with alerts, logging, and tracing that not only proactively identified performance bottlenecks but also helped resolve critical system issues.",
+            },
+            {
+              work: "Diagnosed and fixed many backend challenges - e.g, re-engineering a long-processing saving interest calculation by caching, batching, and concurrent processing, thereby cutting 70% processing time and significantly lowering DB hits.",
+            },
+            {
+              work: "Led the creation of a conversational AI agent (Python, Langchain, Milvus, RAG) to help investment analysts understand the Vietnamese stock market. It leverages an hourly/daily updated datastore covering securities fundamentals, market news, and key financial ratios - supplemented by real-time online data - and won the 2024 Global Shinhan Innoboost award.",
+            },
+          ],
+        },
+        {
+          jobTitle: "Software Engineer",
           companyName: "Bizzi",
           companyUrl: "https://www.bizzi.vn",
           companyDesc:
@@ -38,7 +61,7 @@ export const masterData: MasterDataProps = {
                   work: "Led a lean team through all phases of the invoicing lifecycle to successfully bring the product to market.",
                 },
                 {
-                  work: "Integrated invoices from diverse sources (email, CSV, Bizzi Invoice) for seamless data creation and management.",
+                  work: "Integrated invoices from several sources (email, CSV, Bizzi Invoice) using Hasura, SQS, and RabbitMQ allowed for real-time data management and synchronization.",
                 },
                 {
                   work: "Implemented collaboration workflows and notifications boosting stakeholder coordination for receivables collection.",
@@ -49,19 +72,13 @@ export const masterData: MasterDataProps = {
                 {
                   work: "Integrated Bizzi Pay for automated invoice payment reconciliation.",
                 },
-                {
-                  work: "Upgraded system architecture and implemented monitoring via Datadog/NewRelic for optimal performance.",
-                },
               ],
-            },
-            {
-              work: "Implemented webhook flows using Hasura and RabbitMQ for real-time data sync between Bizzi Invoice and ARM.",
             },
             {
               work: "Helped design Bizzi Pay's database schema, system architecture, and payment integration with PayME and MSB.",
             },
             {
-              work: "Utilized NestJS, Serverless, AWS Lambda and SQS to create a system for extracting bank statements from various banks.",
+              work: "Utilized Typescript, Serverless, AWS Lambda and SQS to create a system for extracting bank statements from various banks.",
             },
           ],
         },
@@ -70,43 +87,27 @@ export const masterData: MasterDataProps = {
           companyName: "Anfin",
           companyUrl: "https://anfin.vn",
           companyDesc:
-            "Venture-backed startup that builds the most innovative products in the wealth management and brokerage space",
+            "Modern trading platform that aims to democratize access to financial services and wealth management for retail investors",
           startMonth: "Dec. 2021",
           endMonth: "May. 2023",
           works: [
             {
-              name: "Trading system",
-              works: [
-                {
-                  work: "Wrote functionality for advanced payment and platform fee payment enforcement, increasing revenue by up to 30%.",
-                },
-                {
-                  work: "Refactored the pricing system to run asynchronously, implemented WebSocket for real-time updates, and used TimescaleDB and Redis for storing data, eliminating reliance on unstable crawled pricing.",
-                },
-              ],
+              work: "Wrote functionality for advanced payment and platform fee payment enforcement, increasing revenue by up to 30%.",
             },
             {
-              name: "Promotion system",
-              works: [
-                {
-                  work: "Decoupled services, redesigned MySQL/Firestore schemas to improve scalability in response to new business needs.",
-                },
-                {
-                  work: "Constructed 20+ gamification campaigns driving 500K+ rewards and user engagement.",
-                },
-              ],
+              work: "Refactored the pricing system to run asynchronously, implemented WebSocket for real-time updates, and used TimescaleDB and Redis for storing data, eliminating reliance on unstable crawled pricing.",
             },
             {
-              work: "Delivered cutting-edge features to the web platform using TypeScript, Next.js and MUI, encompassing trading, portfolio management, and ticker pricing charts.",
+              work: "Redesigned promotion system and MySQL/Firestore schemas to improve scalability in response to new business needs, which enabled me to build on my own 20+ gamification campaigns driving 500K+ rewards and user engagement.",
             },
             {
-              work: "Added robust moderation capabilities - post reporting, user blocking, and automated moderation - to Anfin Community.",
+              work: "Delivered cutting-edge features to the web including trading, portfolio management, and ticker pricing charts independently.",
             },
             {
-              work: "Encouraged and implemented best coding practices across the team, including linters, Go repository templates following DDD patterns, standardized logging and error handling, and clean code principles.",
+              work: "Reduced harmful content by 70% by adding report management and automated moderation (spam, hate speech, malicious URLs, and image moderation) to the Anfin Community.",
             },
             {
-              work: "Enhanced observability via custom GCP logging, tracing, monitoring, and alerting.",
+              work: "Encouraged and implemented best coding practices across the team, including linters, Go repository templates following DDD patterns, standardized logging, error handling, and clean code principles.",
             },
           ],
         },
@@ -126,7 +127,7 @@ export const masterData: MasterDataProps = {
           works: [
             {
               name: "STEAMese",
-              desc: "a social network with 10K+ users enabling children to share and discuss their passion for STEM",
+              desc: "a social network with 15K+ users enabling children to share and discuss their passion for STEM",
               url: "https://steamforvietnam.org/steamese",
               works: [
                 {
@@ -137,29 +138,11 @@ export const masterData: MasterDataProps = {
             {
               name: "STEAMify",
               desc: "in-house mailing platform inspired by Mailchimp",
-              url: "https://steamify.steamforvietnam.org/",
               works: [
-                {
-                  work: "Integrated audience data import from CSV, UI, and BigQuery, handling 500K+ contacts.",
-                },
                 {
                   work: "Enabled admin management of 400+ campaigns, including customization, scheduling, previewing, and testing emails.",
                 },
               ],
-            },
-          ],
-        },
-        {
-          jobTitle: "Software Engineer",
-          companyName: "Nói Nghe Project",
-          companyUrl: "https://www.noinghe.com",
-          companyDesc:
-            "Offers a free chat platform, a mental health blog, and tailored courses for Vietnamese users seeking emotional support.",
-          startMonth: "Mar. 2021",
-          endMonth: "present",
-          works: [
-            {
-              work: "Started as a full-stack engineer, working with React, Node.js, and Jitsi. Expanded to product management and cross-functional leadership throughout the entire product lifecycle.",
             },
           ],
         },
