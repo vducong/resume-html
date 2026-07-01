@@ -1,15 +1,13 @@
 :root {
-  --page-width: 220mm;
-  --page-height: 312mm;
+  --page-width: 216mm;
+  --page-height: 297mm;
 }
 
 body {
   font-family: "EB Garamond", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   margin: 0;
-  padding: 10mm;
+  padding: 13mm;
   line-height: 1.4;
   width: var(--page-width);
   height: var(--page-height);
@@ -26,6 +24,9 @@ h1 {
 
 ul {
   padding-inline-start: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
 @media print {
@@ -33,6 +34,10 @@ ul {
     size: var(--page-width) var(--page-height);
     size: portrait;
     margin: 0;
+  }
+
+  footer {
+    page-break-after: always;
   }
 
   .App {

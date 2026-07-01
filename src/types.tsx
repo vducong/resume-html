@@ -1,7 +1,11 @@
 export type MasterDataProps = {
   contact: ContactProps;
   intro: string;
-  exp: SectionProps[];
+  edu: {
+    title: string;
+    schools: EduProps[];
+  };
+  exp: ExpProps[];
 };
 
 export type ContactProps = {
@@ -9,39 +13,47 @@ export type ContactProps = {
   phone?: string;
   email: string;
   linkedIn?: {
-    href: string;
+    href?: string;
     text: string;
   };
   github?: {
-    href: string;
+    href?: string;
     text: string;
   };
 };
 
-export type SectionProps = {
+export type EduProps = {
+  school: string;
+  degree: string;
+  startMonth: string;
+  endMonth: string;
+};
+
+export type ExpProps = {
   title: string;
-  job: JobProps[];
+  jobs: JobProps[];
 };
 
 export type JobProps = {
   jobTitle: string;
-  companyName?: string;
+  companyName: string;
   companyUrl?: string;
+  companyLocation?: string;
   companyDesc?: string;
   startMonth: string;
   endMonth: string;
-  works: JobWorkExp[];
+  works: WorkProps[];
 };
 
-export type JobWorkExp = ProjectProps | WorkProps;
+export type WorkProps = ProjectProps | WorkingItemProps;
 
 export type ProjectProps = {
   name: string;
   desc?: string;
   url?: string;
-  works: WorkProps[];
+  works: WorkingItemProps[];
 };
 
-export type WorkProps = {
+export type WorkingItemProps = {
   work: string;
 };

@@ -1,10 +1,9 @@
 .headerMain {
   text-align: center;
-  margin-bottom: 4px;
 }
 
 .intro {
-  margin: 8px 0px;
+  margin: 6px 0px;
   white-space: pre-line;
 }
 
@@ -23,10 +22,6 @@
   font-weight: bold;
 }
 
-.sectionTitle span::first-letter {
-  font-size: 1.25em;
-}
-
 .sectionContent {
   display: flex;
   flex-direction: column;
@@ -36,28 +31,50 @@
 
 .jobHeading {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.jobHeadingContent {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.projectTitle {
+  margin-bottom: 2px;
 }
 
 .jobTitle {
   font-weight: bold;
 }
 
-.jobCompanyName {
+.jobDuration {
+  font-weight: bold;
+  text-align: right;
+}
+
+.jobCompanyLocation {
+  text-align: right;
+}
+
+.singleEdu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.eduSchool {
   font-weight: bold;
 }
 
-.jobDuration {
+.eduDuration {
   font-weight: bold;
   width: 140px;
   text-align: right;
 }
 
-.jobWorkExpSection {
-  margin: 0px 0px;
-}
-
-.marker {
-  margin-right: 4px;
+.work {
+  margin: 0;
 }

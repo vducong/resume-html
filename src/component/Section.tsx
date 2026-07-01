@@ -1,18 +1,16 @@
-import { SectionProps } from "../types";
-import { Job } from "./Job";
+import { ReactNode } from "react";
 
-export function Section({ title, job }: SectionProps) {
+export function Section({
+  title,
+  content,
+}: {
+  readonly title: string;
+  readonly content: ReactNode;
+}) {
   return (
     <section className="sectionMain">
       <TitleFormatted title={title} />
-      <div className="sectionContent">
-        {job.map((job, idx) => (
-          <Job
-            key={`${idx}${job.companyName}`}
-            job={job}
-          />
-        ))}
-      </div>
+      {content}
     </section>
   );
 }
