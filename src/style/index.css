@@ -1,21 +1,107 @@
 :root {
-  --page-width: 216mm;
+  /* A4: 210 x 297 */
+  /* current: 245 x 395 */
+  --page-width: 210mm;
   --page-height: 297mm;
 }
 
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+}
+
 body {
-  font-family: "EB Garamond", serif;
-
+  font-family: "Palatino", serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
   margin: 0;
-  padding: 13mm;
-  line-height: 1.4;
-  width: var(--page-width);
-  height: var(--page-height);
+  min-height: 100vh;
+  background: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  .App {
-    margin: 0;
-    width: 100%;
-  }
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-preview {
+  position: relative;
+  width: var(--page-width);
+}
+
+.page-preview--overflow::before {
+  content: "";
+  position: absolute;
+  top: var(--page-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(198, 40, 40, 0.06);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page-one-boundary {
+  position: absolute;
+  top: var(--page-height);
+  left: 0;
+  right: 0;
+  border-bottom: 2px dashed #c62828;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.page-one-boundary::after {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #c62828;
+  background: #fff;
+  padding: 0 4px;
+}
+
+.page-preview__overflow-warning {
+  position: absolute;
+  top: calc(var(--page-height) - 24px);
+  left: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: #c62828;
+  padding: 2px 8px;
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.page {
+  width: var(--page-width);
+  min-height: var(--page-height);
+  padding: 10mm 15mm;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.page .App {
+  margin: 0;
+  width: 100%;
 }
 
 h1 {
@@ -23,31 +109,42 @@ h1 {
 }
 
 ul {
-  padding-inline-start: 20px;
+  padding-inline-start: 18px;
   display: flex;
   flex-direction: column;
   gap: 1px;
 }
 
 @media print {
-  @page {
-    size: var(--page-width) var(--page-height);
-    size: portrait;
-    margin: 0;
+  body {
+    background: none;
+    padding: 0;
+    display: block;
+    min-height: auto;
   }
 
-  footer {
-    page-break-after: always;
+  #root {
+    display: block;
+    width: auto;
   }
 
-  .App {
+  .page-preview::before {
+    display: none;
+  }
+
+  .page-one-boundary,
+  .page-preview__overflow-warning {
+    display: none;
+  }
+
+  .page-preview {
+    width: auto;
+  }
+
+  .page {
+    width: auto;
+    min-height: auto;
+    box-shadow: none;
     margin: 0;
-    border: initial;
-    border-radius: initial;
-    width: initial;
-    min-height: initial;
-    box-shadow: initial;
-    background: initial;
-    page-break-after: always;
   }
 }

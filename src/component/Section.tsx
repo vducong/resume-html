@@ -20,9 +20,9 @@ function TitleFormatted({ title }: { readonly title: string }) {
   return (
     <div className="sectionTitle">
       {words.map((word, idx) => (
-        <span key={`${idx}${word}`}>
-          <span style={{ fontSize: "1.25em" }}>{word.charAt(0)}</span>
-          {word.slice(1)}{" "}
+        <span key={`${idx}${word}`} className="sectionTitleWord">
+          {word}
+          {idx < words.length - 1 ? " " : ""}
         </span>
       ))}
     </div>

@@ -1,4 +1,6 @@
 import "./style/App.css";
+import { PagePreview } from "./component/PagePreview";
+import { PageSizeControls } from "./component/PageSizeControls";
 import { Header } from "./component/Header";
 import { Intro } from "./component/Intro";
 import { Section } from "./component/Section";
@@ -8,24 +10,29 @@ import { SectionContent as EduSectionContent } from "./component/edu/SectionCont
 
 export default function App() {
   return (
-    <div className="App">
-      <Header {...masterData.contact} />
-      <Intro intro={masterData.intro} />
+    <>
+      <PageSizeControls />
+      <PagePreview>
+        <div className="App">
+          <Header {...masterData.contact} />
+          <Intro intro={masterData.intro} />
 
-      {/* Professional Experience */}
-      {masterData.exp.map((section) => (
-        <Section
-          key={section.title}
-          title={section.title}
-          content={<JobSectionContent jobs={section.jobs} />}
-        />
-      ))}
+          {/* Experience */}
+          {masterData.exp.map((section) => (
+            <Section
+              key={section.title}
+              title={section.title}
+              content={<JobSectionContent jobs={section.jobs} />}
+            />
+          ))}
 
-      {/* Education */}
-      <Section
-        title={masterData.edu.title}
-        content={<EduSectionContent schools={masterData.edu.schools} />}
-      />
-    </div>
+          {/* Education */}
+          <Section
+            title={masterData.edu.title}
+            content={<EduSectionContent schools={masterData.edu.schools} />}
+          />
+        </div>
+      </PagePreview>
+    </>
   );
 }

@@ -45,9 +45,26 @@ Open http://localhost:3000 to view it in the browser.
 
    Go wild with the styles in the `src/styles` directory.
 
-### Printing to the PDF
+### Page 1 limit (screen preview)
 
-To get a PDF version of your resume, use your browser's print functionality. While previewing the resume in the browser, press `Ctrl + P` (or `Cmd + P` on Mac) and choose "Save as PDF" as the destination.
+While editing, a dashed **Page 1 limit** line marks where the first printed page ends. Content below that line is tinted red and labeled **Overflows page 1** — trim your copy or try a **Custom** page size (e.g. taller sheet) to fit everything on one page.
+
+The line matches the selected page height (A4, US Letter, or Custom). It is hidden when printing.
+
+### Printing to PDF
+
+The app includes a page-size toolbar above the resume preview:
+
+1. Start the dev server (`npm start`) and open http://localhost:3000
+2. Choose a page size: **A4**, **US Letter**, or **Custom** (enter width/height, e.g. `220mm` / `331mm`)
+3. Click **Print / Save PDF**, or press `Ctrl + P` (Mac: `Cmd + P`)
+4. In the print dialog:
+   - Destination: **Save as PDF**
+   - Paper size: should match the selected preset
+   - Margins: **None** (padding is already applied inside the page)
+   - Background graphics: **On**
+
+Your page size selection is saved in the browser and restored on reload.
 
 ## License
 
