@@ -4,7 +4,7 @@ import { PageSizeControls } from "./component/PageSizeControls";
 import { Header } from "./component/Header";
 import { Intro } from "./component/Intro";
 import { Section } from "./component/Section";
-import { masterData } from "./masterData";
+import masterData from "../docs/master-data.json";
 import { SectionContent as JobSectionContent } from "./component/job/SectionContent";
 import { SectionContent as EduSectionContent } from "./component/edu/SectionContent";
 

@@ -2,7 +2,7 @@
 
 Too tired from adjusting font formats and aligning spacing on Google Docs, I created this template for the peace of mind of resume editing.
 
-Built with Create React App (CRA) and TypeScript, this project aims to provide an easy-to-use and customizable template to help you create a professional-looking resume quickly
+Built with Create React App (CRA), CRACO, and TypeScript, this project provides an easy-to-use and customizable template to help you create a professional-looking resume quickly.
 
 ## Getting started
 
@@ -15,7 +15,13 @@ git clone https://github.com/vducong/resume-html.git
 cd resume-html
 ```
 
-2. Install dependencies
+2. Add your resume data
+
+The app reads CV content from `docs/master-data.json`. After cloning, create that file with your own details (see [Customize your resume](#customize-your-resume) below).
+
+> **Note:** This repo references a private `docs` submodule used for my personal CV workspace. You do **not** need access to it — just add your own `docs/master-data.json` locally.
+
+3. Install dependencies
 
 ```bash
 npm install
@@ -35,15 +41,52 @@ Open http://localhost:3000 to view it in the browser.
 
 1. Edit the data
 
-   Change the `src/masterData.ts` file to include your details, education, work experience, skills, and whatever else makes you look cool :D
+   Create or edit `docs/master-data.json` with your contact info, education, work experience, and projects. The shape of this file matches `MasterDataProps` in `src/types.tsx`.
+
+   Minimal example:
+
+   ```json
+   {
+     "contact": {
+       "fullName": "Your Name",
+       "email": "you@example.com"
+     },
+     "intro": "A short professional summary.",
+     "edu": {
+       "title": "Education",
+       "schools": [
+         {
+           "school": "University Name",
+           "degree": "B.S. Computer Science",
+           "startMonth": "Sep 2018",
+           "endMonth": "May 2022"
+         }
+       ]
+     },
+     "exp": [
+       {
+         "title": "Experience",
+         "jobs": [
+           {
+             "jobTitle": "Software Engineer",
+             "companyName": "Acme Inc",
+             "startMonth": "Jan 2023",
+             "endMonth": "Present",
+             "works": [{ "work": "Shipped a feature that improved X by Y%." }]
+           }
+         ]
+       }
+     ]
+   }
+   ```
 
 2. Edit the structure
 
-   Tweak the `src/App.tsx` file and components in the `src/components` directory if you want to mess with the structure.
+   Tweak `src/App.tsx` and components in the `src/component` directory if you want to change the layout.
 
 3. Edit the styles
 
-   Go wild with the styles in the `src/styles` directory.
+   Adjust styles in the `src/style` directory.
 
 ### Page 1 limit (screen preview)
 
@@ -66,6 +109,22 @@ The app includes a page-size toolbar above the resume preview:
 
 Your page size selection is saved in the browser and restored on reload.
 
+## Private docs submodule (optional)
+
+The `docs/` folder is a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) pointing to a private repository. It is only needed if you maintain this fork with the same setup and have access to that repo.
+
+```bash
+git clone --recurse-submodules https://github.com/vducong/resume-html.git
+```
+
+If you already cloned without submodules:
+
+```bash
+git submodule update --init
+```
+
+Without access to the private docs repo, skip submodule init and use your own `docs/master-data.json` as described above.
+
 ## License
 
-Format is MIT but all the data is owned by Duc Cong Vu.
+The template code is [MIT](LICENSE). Resume content in `docs/master-data.json` is yours when you use this template with your own data.
