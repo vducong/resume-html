@@ -1,13 +1,26 @@
 import type { ContactProps } from "../types";
 
-export function Header({ fullName, phone, email, linkedIn, github }: ContactProps) {
+export function Header({ fullName, location, phone, email, linkedIn, github }: ContactProps) {
   return (
     <section className="headerMain">
       <div className="headerTitle">{fullName}</div>
       <div className="headerContact">
-        <span>{phone}</span>
-        {" | "}
+        {location && (
+          <>
+            <span>{location}</span>
+            {" | "}
+          </>
+        )}
+
+        {phone && (
+          <>
+            <span>{phone}</span>
+            {" | "}
+          </>
+        )}
+
         <a href={`mailto:${email}`}>{email}</a>
+
         {linkedIn && (
           <>
             {" | "}
