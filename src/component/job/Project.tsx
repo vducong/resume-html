@@ -1,15 +1,11 @@
-import { ProjectProps } from "../../types";
+import type { ProjectProps } from "../../types";
 import { WorkingItem } from "./WorkingItem";
 
 export function Project({ project }: { readonly project: ProjectProps }) {
   return (
     <div className="project">
       <div className="projectTitle">
-        {project.url ? (
-          <a href={project.url}>{project.name}</a>
-        ) : (
-          <span>{project.name}</span>
-        )}
+        {project.url ? <a href={project.url}>{project.name}</a> : <span>{project.name}</span>}
         {project.desc && (
           <span>
             {": "}

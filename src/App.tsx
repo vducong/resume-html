@@ -1,12 +1,16 @@
 import "./style/App.css";
-import { PagePreview } from "./component/PagePreview";
-import { PageSizeControls } from "./component/PageSizeControls";
+
+import masterDataJson from "../docs/master-data.json";
+import { SectionContent as EduSectionContent } from "./component/edu/SectionContent";
 import { Header } from "./component/Header";
 import { Intro } from "./component/Intro";
-import { Section } from "./component/Section";
-import masterData from "../docs/master-data.json";
 import { SectionContent as JobSectionContent } from "./component/job/SectionContent";
-import { SectionContent as EduSectionContent } from "./component/edu/SectionContent";
+import { PagePreview } from "./component/PagePreview";
+import { PageSizeControls } from "./component/PageSizeControls";
+import { Section } from "./component/Section";
+import type { MasterDataProps } from "./types";
+
+const masterData = masterDataJson as MasterDataProps;
 
 export default function App() {
   return (

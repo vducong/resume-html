@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+
 import {
   getDimensionsForPreset,
   loadStoredPageSize,
-  PageDimensions,
-  PageSizePreset,
   saveStoredPageSize,
-  StoredPageSize,
+  type PageDimensions,
+  type PageSizePreset,
+  type StoredPageSize,
 } from "../pageSizes";
 
 const PRINT_STYLE_ID = "print-page-size";

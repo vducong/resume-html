@@ -1,4 +1,4 @@
-import { WorkProps } from "../../types";
+import type { WorkProps } from "../../types";
 import { Project } from "./Project";
 import { WorkingItem } from "./WorkingItem";
 

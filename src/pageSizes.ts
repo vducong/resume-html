@@ -9,10 +9,7 @@ export type PageSizePresetConfig = PageDimensions & {
   label: string;
 };
 
-export const PAGE_SIZE_PRESETS: Record<
-  Exclude<PageSizePreset, "custom">,
-  PageSizePresetConfig
-> = {
+export const PAGE_SIZE_PRESETS: Record<Exclude<PageSizePreset, "custom">, PageSizePresetConfig> = {
   a4: {
     label: "A4",
     width: "210mm",

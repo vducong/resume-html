@@ -1,12 +1,6 @@
-import { ContactProps } from "../types";
+import type { ContactProps } from "../types";
 
-export function Header({
-  fullName,
-  phone,
-  email,
-  linkedIn,
-  github,
-}: ContactProps) {
+export function Header({ fullName, phone, email, linkedIn, github }: ContactProps) {
   return (
     <section className="headerMain">
       <div className="headerTitle">{fullName}</div>

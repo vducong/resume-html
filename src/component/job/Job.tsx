@@ -1,4 +1,4 @@
-import { JobProps } from "../../types";
+import type { JobProps } from "../../types";
 import { Heading } from "./Heading";
 import { Work } from "./Work";
 

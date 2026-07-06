@@ -1,4 +1,4 @@
-import { JobProps } from "../../types";
+import type { JobProps } from "../../types";
 import { Job } from "./Job";
 
 export function SectionContent({ jobs }: { readonly jobs: JobProps[] }) {

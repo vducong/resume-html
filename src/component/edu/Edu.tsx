@@ -1,4 +1,4 @@
-import { EduProps } from "../../types";
+import type { EduProps } from "../../types";
 
 export function Edu({ edu }: { readonly edu: EduProps }) {
   return (

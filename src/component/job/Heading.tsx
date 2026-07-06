@@ -1,4 +1,4 @@
-import { JobProps } from "../../types";
+import type { JobProps } from "../../types";
 
 export function Heading({ job }: { readonly job: JobProps }) {
   return (
@@ -12,19 +12,13 @@ export function Heading({ job }: { readonly job: JobProps }) {
       <div className="">
         {job.companyName && (
           <span className="jobCompanyName">
-            {job.companyUrl ? (
-              <a href={job.companyUrl}>{job.companyName}</a>
-            ) : (
-              job.companyName
-            )}
+            {job.companyUrl ? <a href={job.companyUrl}>{job.companyName}</a> : job.companyName}
           </span>
         )}
         {job.companyLocation && (
           <span className="jobCompanyLocation"> ({job.companyLocation})</span>
         )}
-        {job.companyDesc && (
-          <span className="jobCompanyDesc"> | {job.companyDesc}</span>
-        )}
+        {job.companyDesc && <span className="jobCompanyDesc"> | {job.companyDesc}</span>}
       </div>
     </div>
   );

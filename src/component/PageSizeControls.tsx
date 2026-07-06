@@ -1,5 +1,6 @@
-import { PAGE_SIZE_PRESETS, PageSizePreset } from "../pageSizes";
 import { usePageSize } from "../hooks/usePageSize";
+import { PAGE_SIZE_PRESETS, type PageSizePreset } from "../pageSizes";
+
 import "../style/PageSizeControls.css";
 
 const PRESET_OPTIONS: { value: PageSizePreset; label: string }[] = [
@@ -9,15 +10,8 @@ const PRESET_OPTIONS: { value: PageSizePreset; label: string }[] = [
 ];
 
 export function PageSizeControls() {
-  const {
-    preset,
-    customWidth,
-    customHeight,
-    setPreset,
-    setCustomWidth,
-    setCustomHeight,
-    print,
-  } = usePageSize();
+  const { preset, customWidth, customHeight, setPreset, setCustomWidth, setCustomHeight, print } =
+    usePageSize();
 
   return (
     <div className="page-size-controls">
@@ -61,11 +55,7 @@ export function PageSizeControls() {
         </>
       )}
 
-      <button
-        type="button"
-        className="page-size-controls__print"
-        onClick={print}
-      >
+      <button type="button" className="page-size-controls__print" onClick={print}>
         Print / Save PDF
       </button>
     </div>

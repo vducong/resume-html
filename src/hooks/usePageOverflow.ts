@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from "react";
+import { useEffect, useState, type RefObject } from "react";
 
 function measurePageHeightPx(): number {
   const probe = document.createElement("div");
