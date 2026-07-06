@@ -6,6 +6,7 @@ export function Edu({ edu }: { readonly edu: EduProps }) {
       <div>
         <div className="eduSchool">{edu.school}</div>
         <div className="eduDegree">{edu.degree}</div>
+        {edu.achievement && <div className="eduAchievement">{edu.achievement}</div>}
       </div>
       <div className="eduDuration">
         {edu.startMonth} - {edu.endMonth}
