@@ -1,12 +1,20 @@
+export type SectionProps<T> = {
+  title: string;
+  position: number;
+} & T;
+
+export type EduSectionProps = SectionProps<{ schools: EduProps[] }>;
+
+export type ExpSectionProps = SectionProps<{ jobs: JobProps[] }>;
+
+export type SkillsSectionProps = SectionProps<{ skills: SkillProps[] }>;
+
 export type MasterDataProps = {
   contact: ContactProps;
   intro: string;
-  edu: {
-    title: string;
-    schools: EduProps[];
-  };
-  exp: ExpProps[];
-  skills: SkillProps[];
+  edu: EduSectionProps;
+  exp: ExpSectionProps[];
+  skills?: SkillsSectionProps;
 };
 
 export type ContactProps = {
@@ -36,11 +44,6 @@ export type EduProps = {
 export type SkillProps = {
   name: string;
   proficiency?: string;
-};
-
-export type ExpProps = {
-  title: string;
-  jobs: JobProps[];
 };
 
 export type JobProps = {

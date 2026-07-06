@@ -41,7 +41,9 @@ Open http://localhost:3000 to view it in the browser.
 
 1. Edit the data
 
-   Create or edit `docs/master-data.json` with your contact info, education, work experience, and projects. The shape of this file matches `MasterDataProps` in `src/types.tsx`.
+   Create or edit `docs/master-data.json` with your contact info, education, work experience, and projects. The shape of this file matches `MasterDataProps` in `src/types.ts`.
+
+   `intro` and `contact` always render at the top. Each reorderable section (`edu`, each `exp` entry, `skills`) uses `{ title, position, <items> }`. Sections render in ascending `position` order — change positions in JSON to reorder without editing `src/App.tsx`.
 
    Minimal example:
 
@@ -54,6 +56,7 @@ Open http://localhost:3000 to view it in the browser.
      "intro": "A short professional summary.",
      "edu": {
        "title": "Education",
+       "position": 50,
        "schools": [
          {
            "school": "University Name",
@@ -66,6 +69,7 @@ Open http://localhost:3000 to view it in the browser.
      "exp": [
        {
          "title": "Experience",
+         "position": 20,
          "jobs": [
            {
              "jobTitle": "Software Engineer",
@@ -76,13 +80,18 @@ Open http://localhost:3000 to view it in the browser.
            }
          ]
        }
-     ]
+     ],
+     "skills": {
+       "title": "Skills",
+       "position": 60,
+       "skills": [{ "name": "English", "proficiency": "Native or bilingual proficiency" }]
+     }
    }
    ```
 
 2. Edit the structure
 
-   Tweak `src/App.tsx` and components in the `src/component` directory if you want to change the layout.
+   Tweak components in the `src/component` directory if you want to change how sections render. Reorder sections by editing `position` values in `docs/master-data.json`.
 
 3. Edit the styles
 
