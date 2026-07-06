@@ -6,10 +6,12 @@ export type MasterDataProps = {
     schools: EduProps[];
   };
   exp: ExpProps[];
+  skills: SkillProps[];
 };
 
 export type ContactProps = {
   fullName: string;
+  location?: string;
   phone?: string;
   email: string;
   linkedIn?: {
@@ -25,8 +27,15 @@ export type ContactProps = {
 export type EduProps = {
   school: string;
   degree: string;
+  location?: string;
+  achievement?: string;
   startMonth: string;
   endMonth: string;
+};
+
+export type SkillProps = {
+  name: string;
+  proficiency?: string;
 };
 
 export type ExpProps = {

@@ -78,8 +78,14 @@
   font-weight: bold;
   width: 140px;
   text-align: right;
+  width: auto;
+  white-space: nowrap;
 }
 
 .work {
   margin: 0;
+}
+
+.skillName {
+  font-weight: bold;
 }

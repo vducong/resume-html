@@ -8,6 +8,7 @@ import { SectionContent as JobSectionContent } from "./component/job/SectionCont
 import { PagePreview } from "./component/PagePreview";
 import { PageSizeControls } from "./component/PageSizeControls";
 import { Section } from "./component/Section";
+import { SectionContent as SkillSectionContent } from "./component/skill/SectionContent";
 import type { MasterDataProps } from "./types";
 
 const masterData = masterDataJson as MasterDataProps;
@@ -35,6 +36,11 @@ export default function App() {
             title={masterData.edu.title}
             content={<EduSectionContent schools={masterData.edu.schools} />}
           />
+
+          {/* Skills */}
+          {masterData.skills?.length > 0 && (
+            <Section title="Skills" content={<SkillSectionContent skills={masterData.skills} />} />
+          )}
         </div>
       </PagePreview>
     </>
